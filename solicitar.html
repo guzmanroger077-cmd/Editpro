@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar edición - EditPro</title>  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style></head><body>  <div class="container">
+    <h1>🎬 Solicitar una edición</h1><form onsubmit="enviarSolicitud(event)">
+
+  <label for="nombre">Tu nombre</label>
+  <input type="text" id="nombre" required>
+
+  <label for="email">Correo electrónico</label>
+  <input type="email" id="email" required>
+
+  <label for="servicio">Tipo de edición</label>
+  <select id="servicio" required>
+    <option value="">Selecciona una opción</option>
+    <option>Edición para TikTok</option>
+    <option>Edición para Instagram</option>
+    <option>Edición para YouTube</option>
+    <option>Edición profesional</option>
+  </select>
+
+  <label for="descripcion">¿Qué necesitas?</label>
+  <textarea id="descripcion" required></textarea>
+
+  <button type="submit">
+    Enviar solicitud
+  </button>
+
+</form>
+
+  </div>  <script>
+    function enviarSolicitud(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value;
+
+      alert(
+        "¡Gracias, " + nombre +
+        "! Tu solicitud fue registrada."
+      );
+    }
+  </script></body>
+</html>
